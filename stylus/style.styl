@@ -1,0 +1,225 @@
+﻿@import "normalize.styl"
+@import "font.styl"
+@import "nib"
+
+vendor-prefixes = webkit o ms moz official esli
+
+dark_gray = #333
+light_gray = #818181
+pinkito = #CC2F6F
+tablet_width = 480px
+
+a
+	text-decoration none
+body
+	font-size 16px
+	font-family 'Varela Round', sans-serif
+
+figure
+	margin 0
+
+img
+	vertical-align top
+
+.border-bottom-gray
+	border-bottom 1px solid light_gray
+.center-block
+	margin 0 auto
+.center-text
+	text-align center !important
+.left
+	float left
+.right
+	float right
+.padding
+	padding 1em
+.relative
+	position relative
+.right-text
+	text-align right
+.small
+	width 20em
+
+.author
+	text-align left
+	font-size 1rem
+	color light_gray
+
+.container
+	font-size 0
+	padding 1.4rem
+	text-align center
+.description
+	p
+		margin 0
+	.author
+		margin-bottom 1.2em
+	.name
+		font-size 1.2em
+.header
+	height 3.5em
+	.title
+		font-size 1.1em
+		text-align center
+		margin 0
+		line-height 3.5em
+	.button-menu
+		position absolute
+		top 50%
+		margin-top -10px
+		left .5em
+		color dark_gray
+
+.menu
+	display none
+
+.name
+	text-align left
+	font-size 1rem
+	color dark_gray
+.play
+	padding 1.3em 0
+.playing
+	.actions
+		background rgba(black,.3)
+		bottom 0
+		left 0
+		padding 1em
+		position absolute
+		right 0
+	.action
+		color white
+		font-size 1.4em
+		&.gray
+			color light_gray
+		&.margin
+			margin .8rem
+.progress
+	margin 1em 0
+	.circle
+		width 10px
+		height 10px
+		background dark_gray
+		border-radius 50%
+		position absolute
+		right 0
+		top -2px
+		animation 1s circle infinite
+
+	.state
+		background pinkito
+		height 5px
+		width 30%
+		border-radius 5px
+		animation 20s state infinite linear
+
+
+	.total
+		background light_gray
+		height 5px
+		width 75%
+		border-radius 5px
+		margin 0 auto
+	.min
+	.max
+		font-size .8em
+		position absolute
+		top -5px
+	.min
+		left 0
+	.max
+		right 0
+.song
+	display inline-block
+	font-size 1rem
+	margin-bottom 1em
+	margin-right 1em
+	text-align left
+	width 8rem
+
+	&:nth-child(even)
+		margin-right 0
+	p
+		margin .5em 0
+
+@keyframes state
+	0%
+		width 0%
+	100%
+		width 100%
+
+@keyframes circle
+	0%
+		transform scale(1)
+	100%
+		transform scale(2)
+
+@media screen and (min-width: tablet_width)
+	.song
+		&:nth-child(even)
+			margin-right 1em
+
+	.playing
+		&.medium
+			width auto
+	.image
+		img
+			width 100%
+			height auto
+
+@media screen and (min-width: 1000px)
+	.button-menu
+		display none
+	.header
+		height auto
+		.title
+			display none
+
+	.logo-image
+		width 122px
+
+	.logo
+		padding 1.3em 0
+		overflow hidden
+	.wrap
+		width 1000px
+	.round
+		border-radius 50%
+		overflow hidden
+	.avatar
+		width 38px
+		height 38px
+		img
+			max-width 100%
+	.username
+		color light_gray
+		position relative
+		top 9px
+		margin-left .5em
+		&:after
+			content ""
+			display inline-block
+			border-top 7px solid light_gray
+			border-left 7px solid transparent
+			border-right 7px solid transparent
+			margin-left .4em
+	.search
+		margin-right 1em
+		.input-search
+			border 1px solid light_gray
+			height 2.5em
+			border-radius 5px
+			padding 0 1em 0 2em
+		.search-icon
+			position absolute
+			left .5em
+			top .8em
+			color light_gray
+			font-size 1em
+		.icon-close
+			position absolute
+			top .6em
+			color light_gray
+			right .5em
+			font-size 1em
+
